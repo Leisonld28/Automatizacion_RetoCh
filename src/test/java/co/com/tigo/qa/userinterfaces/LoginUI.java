@@ -92,12 +92,51 @@ public class LoginUI {
             .locatedBy("(//input[contains(@placeholder,'Type here')])[2]");
 
     public static final Target  SELECCIONAR_VACANTE= Target.the("candidato")
-            .locatedBy("//span[contains(.,'Sales Representative')]");
+            .locatedBy("//span[contains(.,'Payroll Administrator')]");
+
 
     public static final Target  GUARDAR= Target.the("Guardar")
             .locatedBy("//button[@type='submit'][contains(.,'Save')]");
 
     public static final Target  REGISTROS_ALMACENADOS= Target.the("Guardar")
             .locatedBy("//span[contains(.,'(71) Records Found')]");
+
+    public static final Target  PALABRA_CLAVES= Target.the("Palabras Claves")
+            .locatedBy("//input[@placeholder='Enter comma seperated words...']");
+    public static final Target  NOTAS= Target.the("Palabras Claves")
+            .locatedBy("//textarea[@placeholder='Type here']");
+    public static final Target  CONSENTIMIENTO= Target.the("Palabras Claves")
+            .locatedBy("//i[@class='oxd-icon bi-check oxd-checkbox-input-icon']");
+
+    public static final Target  BOTON_ENTREVISTA= Target.the("candidato")
+            .locatedBy("//button[@type='button'][contains(.,'Schedule Interview')]");
+
+    public static final Target  BOTON_SHORTLIST= Target.the("candidato")
+            .locatedBy("//button[@type='button'][contains(.,'Shortlist')]");
+    public static final Target  SAVE_BOTON_SHORTLIST= Target.the("candidato")
+            .locatedBy("//button[@type='submit'][contains(.,'Save')]");
+
+    public static final Target  TITULO= Target.the("candidato")
+            .locatedBy("(//input[contains(@class,'oxd-input oxd-input--active')])[6]");
+    public static final Target  ENTREVISTADOR= Target.the("candidato")
+            .locatedBy("//input[contains(@include-employees,'onlyCurrent')]");
+    public static final Target  FECHA= Target.the("candidato")
+            .locatedBy("//i[@class='oxd-icon bi-calendar oxd-date-input-icon']");
+    public static final Target  FECHA_HOY= Target.the("candidato")
+            .locatedBy("//div[@class='oxd-date-input-link --today'][contains(.,'Today')]");
+    public static final Target  NOMBRE_ENTREVISTADOR= Target.the("candidato")
+            .locatedBy("//span[contains(.,'yedghjb1 ru84 90jsnd')]");
+
+    public static final Target  CANDIDATO_ACEPTADO= Target.the("candidato")
+            .locatedBy("//button[@type='button'][contains(.,'Mark Interview Passed')]");
+
+    public static final Target  OFERTAS_TRABAJO= Target.the("candidato")
+            .locatedBy("//button[@type='button'][contains(.,'Offer Job')]");
+
+    public static final Target  BOTON_HIRE= Target.the("candidato")
+            .locatedBy("//button[@type='button'][contains(.,'Hire')]");
+
+    public static final Target  HIRE= Target.the("candidato")
+            .locatedBy("(//div[contains(.,'Hired')])[13]");
 
 }

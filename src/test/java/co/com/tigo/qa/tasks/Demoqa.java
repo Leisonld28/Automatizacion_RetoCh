@@ -37,11 +37,35 @@ public class Demoqa {
                 Click.on(LoginUI.VACANCY),
                 Click.on(LoginUI.SELECCIONAR_VACANTE),
                 Enter.theValue(propertiesLoader.getProperty("CORREOELECTRONICO")).into(LoginUI.CORREO_ELECTRONICO2),
-                Enter.theValue(propertiesLoader.getProperty("TELEFONO")).into(LoginUI.NUMERO_TELEFONICO),
+                Enter.theValue(propertiesLoader.getProperty("TELEFON")).into(LoginUI.NUMERO_TELEFONICO),
+                Enter.theValue(propertiesLoader.getProperty("PALABRASCLAVES")).into(LoginUI.PALABRA_CLAVES),
+                Enter.theValue(propertiesLoader.getProperty("NOTAS")).into(LoginUI.NOTAS),
+                Click.on(LoginUI.CONSENTIMIENTO),
                 Espera.esperaSeg(4),
                 Scroll.to(LoginUI.GUARDAR),
                 Click.on(LoginUI.GUARDAR),
-                Espera.esperaSeg(5)
+                Espera.esperaSeg(5),
+                Click.on(LoginUI.BOTON_SHORTLIST),
+                Espera.esperaSeg(2),
+                Click.on(LoginUI.SAVE_BOTON_SHORTLIST),
+                Espera.esperaSeg(5),
+                Click.on(LoginUI.BOTON_ENTREVISTA),
+                Enter.theValue(propertiesLoader.getProperty("TITULO")).into(LoginUI.TITULO),
+                Enter.theValue(propertiesLoader.getProperty("ENTREVISTADOR")).into(LoginUI.ENTREVISTADOR),
+                Click.on(LoginUI.NOMBRE_ENTREVISTADOR),
+                Click.on(LoginUI.FECHA),
+                Click.on(LoginUI.FECHA_HOY),
+                Scroll.to(LoginUI.SAVE_BOTON_SHORTLIST),
+                Click.on(LoginUI.SAVE_BOTON_SHORTLIST),
+                Espera.esperaSeg(4),
+                Click.on(LoginUI.CANDIDATO_ACEPTADO),
+                Click.on(LoginUI.SAVE_BOTON_SHORTLIST),
+                Click.on(LoginUI.OFERTAS_TRABAJO),
+                Click.on(LoginUI.SAVE_BOTON_SHORTLIST),
+                Click.on(LoginUI.BOTON_HIRE),
+                Click.on(LoginUI.SAVE_BOTON_SHORTLIST)
+
+
         );
 
     }

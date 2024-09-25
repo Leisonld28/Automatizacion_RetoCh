@@ -176,9 +176,11 @@ public class DemoqaStepDefinition {
     public void realizoLaValidacionDelCandidatoCreado() {
         usuario.attemptsTo(
                 Click.on(LoginUI.RECRUITMENT),
-
-                Scroll.to(LoginUI.ADICION_CANDIDATO)
+                Scroll.to(LoginUI.ADICION_CANDIDATO),
+                Scroll.to(LoginUI.HIRE)
         );
+        EsperaForzada.espera(4);
+
     }
 }
 
