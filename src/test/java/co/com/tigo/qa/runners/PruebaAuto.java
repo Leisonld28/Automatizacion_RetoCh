@@ -8,16 +8,18 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(glue = "co.com.tigo.qa.stepdefinitions",
-        features =
-                {"src/test/resources/features/01_Prepago/1.1_Compras/Pruebas.feature"
+        features ={
+                "src/test/resources/features/01_Prepago/1.1_Compras/Pruebas.feature",
+
+
 
 
         },
 
         snippets = CAMELCASE,
-        tags = "",
+        tags = "  @article",
         monochrome = true
 )
 
-public class OneAppPaquetes {
+public class PruebaAuto {
 }

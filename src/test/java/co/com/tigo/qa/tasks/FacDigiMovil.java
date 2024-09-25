@@ -1,13 +1,12 @@
 package co.com.tigo.qa.tasks;
 
+import co.com.tigo.qa.userinterfaces.FacturaDigitalMovilUI;
 import co.com.tigo.qa.utils.EjecutarScript;
+import co.com.tigo.qa.utils.getShadowRoot;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.openqa.selenium.WebDriver;
-
-import static co.com.tigo.qa.userinterfaces.FacturaDigitalMovilUI.*;
-import static co.com.tigo.qa.utils.getShadowRoot.getTargetShadow;
 
 public class FacDigiMovil implements Task{
 
@@ -23,8 +22,8 @@ public class FacDigiMovil implements Task{
     @Override
     public <T extends Actor> void performAs(T t) {
 
-        EjecutarScript.scrollSelenium(driver,getTargetShadow(driver,MAINSHADOWDIGITALMOVIL, TITULO_FACTURADIGI));
-        getTargetShadow(driver, MAINSHADOWDIGITALMOVIL, BOTONMODIFICAR).click();
+        EjecutarScript.scrollSelenium(driver, getShadowRoot.getTargetShadow(driver, FacturaDigitalMovilUI.MAINSHADOWDIGITALMOVIL, FacturaDigitalMovilUI.TITULO_FACTURADIGI));
+        getShadowRoot.getTargetShadow(driver, FacturaDigitalMovilUI.MAINSHADOWDIGITALMOVIL, FacturaDigitalMovilUI.BOTONMODIFICAR).click();
 
     }
 

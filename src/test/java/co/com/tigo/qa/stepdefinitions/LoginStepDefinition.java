@@ -2,12 +2,9 @@ package co.com.tigo.qa.stepdefinitions;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
 import co.com.tigo.qa.interactions.Espera;
-import io.cucumber.java.en.And;
-import net.serenitybdd.screenplay.actions.Scroll;
+import co.com.tigo.qa.tasks.Login;
 import org.openqa.selenium.WebDriver;
 
-import co.com.tigo.qa.tasks.Login;
-import co.com.tigo.qa.utils.EsperaForzada;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.Actor;
@@ -33,6 +30,7 @@ public class LoginStepDefinition {
         usuario.attemptsTo(
                 Espera.esperaSeg(8),
                 Login.autenticar());
+
 
     }
 

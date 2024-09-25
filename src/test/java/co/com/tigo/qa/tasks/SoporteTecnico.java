@@ -1,14 +1,13 @@
 package co.com.tigo.qa.tasks;
 
+import co.com.tigo.qa.userinterfaces.ConsultaDispositivoUI;
+import co.com.tigo.qa.userinterfaces.ServiciosUI;
+import co.com.tigo.qa.utils.EjecutarScript;
+import co.com.tigo.qa.utils.getShadowRoot;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.openqa.selenium.WebDriver;
-
-import static co.com.tigo.qa.userinterfaces.ConsultaDispositivoUI.BOTONCONSULTAR;
-import static co.com.tigo.qa.userinterfaces.ServiciosUI.MAINSHADOWSOPORTE;
-import static co.com.tigo.qa.utils.EjecutarScript.scrollSelenium;
-import static co.com.tigo.qa.utils.getShadowRoot.getTargetShadow;
 
 public class SoporteTecnico implements Task{
 
@@ -22,8 +21,8 @@ public class SoporteTecnico implements Task{
     @Override
     public <T extends Actor> void performAs(T t) {
 
-        scrollSelenium(driver, getTargetShadow(driver, MAINSHADOWSOPORTE, BOTONCONSULTAR));
-        getTargetShadow(driver,MAINSHADOWSOPORTE, BOTONCONSULTAR).click();
+        EjecutarScript.scrollSelenium(driver, getShadowRoot.getTargetShadow(driver, ServiciosUI.MAINSHADOWSOPORTE, ConsultaDispositivoUI.BOTONCONSULTAR));
+        getShadowRoot.getTargetShadow(driver, ServiciosUI.MAINSHADOWSOPORTE, ConsultaDispositivoUI.BOTONCONSULTAR).click();
 
         }
 

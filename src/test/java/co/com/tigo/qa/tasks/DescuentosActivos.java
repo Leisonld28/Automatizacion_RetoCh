@@ -1,13 +1,12 @@
 package co.com.tigo.qa.tasks;
 
+import co.com.tigo.qa.userinterfaces.ServiciosUI;
 import co.com.tigo.qa.utils.EsperaForzada;
+import co.com.tigo.qa.utils.getShadowRoot;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.openqa.selenium.WebDriver;
-
-import static co.com.tigo.qa.userinterfaces.ServiciosUI.*;
-import static co.com.tigo.qa.utils.getShadowRoot.getTargetShadow;
 
 public class DescuentosActivos implements Task{
 
@@ -23,9 +22,9 @@ public class DescuentosActivos implements Task{
     @Override
     public <T extends Actor> void performAs(T t) {
 
-        getTargetShadow(driver, SHADOWCARDDESCUENTOS, BOTON_VER_DESCUENTOS).click();
+        getShadowRoot.getTargetShadow(driver, ServiciosUI.SHADOWCARDDESCUENTOS, ServiciosUI.BOTON_VER_DESCUENTOS).click();
         EsperaForzada.espera(5);
-        getTargetShadow(driver, SHADOWCARDDESCUENTOSACTIVOS, TITULO_DESCUENTOSACTIVOS).getRect();
+        getShadowRoot.getTargetShadow(driver, ServiciosUI.SHADOWCARDDESCUENTOSACTIVOS, ServiciosUI.TITULO_DESCUENTOSACTIVOS).getRect();
         EsperaForzada.espera(5);
     }
 

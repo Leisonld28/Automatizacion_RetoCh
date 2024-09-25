@@ -1,16 +1,5 @@
 package co.com.tigo.qa.tasks;
 
-import net.serenitybdd.screenplay.Performable;
-import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.JavaScriptClick;
-import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-
-
-import static co.com.tigo.qa.userinterfaces.OneAppMovilUI.*;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
-
 public class SeleccionarDetalle {
     /*public static Performable Minutos(){
         return Task.where("{0} Selecciona detalles de minutos",

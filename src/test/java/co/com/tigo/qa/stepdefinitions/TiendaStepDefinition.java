@@ -2,12 +2,14 @@ package co.com.tigo.qa.stepdefinitions;
 
 
 import co.com.tigo.qa.questions.ElMensaje;
+import co.com.tigo.qa.userinterfaces.TiendaUI;
 import co.com.tigo.qa.utils.EsperaForzada;
 import co.com.tigo.qa.utils.PropertiesLoader;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -17,7 +19,6 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
 
-import static co.com.tigo.qa.userinterfaces.TiendaUI.BOTONIR;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
@@ -39,7 +40,7 @@ public class TiendaStepDefinition {
 
     public void seleccionoTiendaOnlineTigo() {
         EsperaForzada.espera(10);
-        usuario.attemptsTo(JavaScriptClick.on(BOTONIR));
+        usuario.attemptsTo(JavaScriptClick.on(TiendaUI.BOTONIR));
 
     }
 
@@ -49,7 +50,7 @@ public class TiendaStepDefinition {
         ArrayList<String> tabs = new ArrayList<String>(hisBrowser.getWindowHandles());
         hisBrowser.switchTo().window(tabs.get(1));
         EsperaForzada.espera(8);
-        usuario.should(seeThat(ElMensaje.tituloTienda(mensaje), Matchers.is(mensaje)));
+        usuario.should(GivenWhenThen.seeThat(ElMensaje.tituloTienda(mensaje), Matchers.is(mensaje)));
     }
 
 }

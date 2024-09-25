@@ -1,17 +1,15 @@
 package co.com.tigo.qa.tasks;
 
+import co.com.tigo.qa.userinterfaces.ConsultaDispositivoUI;
 import co.com.tigo.qa.utils.EjecutarScript;
 import co.com.tigo.qa.utils.EsperaForzada;
 import co.com.tigo.qa.utils.PropertiesLoader;
+import co.com.tigo.qa.utils.getShadowRoot;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import static co.com.tigo.qa.userinterfaces.ConsultaDispositivoUI.*;
-import static co.com.tigo.qa.utils.getShadowRoot.getShadowExistente;
-import static co.com.tigo.qa.utils.getShadowRoot.getTargetShadow;
 
 public class LLenarSegundaForma implements Task {
     private WebDriver driver;
@@ -43,35 +41,35 @@ public class LLenarSegundaForma implements Task {
 
         if (tipo.equals("Robo")){
 
-            webelementoformtheft = getTargetShadow(driver, BLOQUEOONESHADOWDEVICE, BLOQUEOTHEFTSHADOWDEVICE);
-            getShadowExistente(webelementoformtheft, INPUT_DEPTO_ROBO).sendKeys(Depto);
-            getShadowExistente(webelementoformtheft, INPUT_FECHA_ROBO).sendKeys(Fecha);
-            getShadowExistente(webelementoformtheft, INPUT_HORA_ROBO).sendKeys(Hora);
+            webelementoformtheft = getShadowRoot.getTargetShadow(driver, ConsultaDispositivoUI.BLOQUEOONESHADOWDEVICE, ConsultaDispositivoUI.BLOQUEOTHEFTSHADOWDEVICE);
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_DEPTO_ROBO).sendKeys(Depto);
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_FECHA_ROBO).sendKeys(Fecha);
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_HORA_ROBO).sendKeys(Hora);
             EsperaForzada.espera(3);
-            getShadowExistente(webelementoformtheft, INPUT_DIR_ROBO).sendKeys(Direcc);
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_DIR_ROBO).sendKeys(Direcc);
             EsperaForzada.espera(5);
-            EjecutarScript.scrollSelenium(driver,getShadowExistente(webelementoformtheft, INPUT_DESC_ROBO));
-            getShadowExistente(webelementoformtheft, INPUT_DESC_ROBO).click();
-            getShadowExistente(webelementoformtheft, INPUT_DESC_ROBO).clear();
-            getShadowExistente(webelementoformtheft, INPUT_DESC_ROBO).sendKeys(Desc);
+            EjecutarScript.scrollSelenium(driver, getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_DESC_ROBO));
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_DESC_ROBO).click();
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_DESC_ROBO).clear();
+            getShadowRoot.getShadowExistente(webelementoformtheft, ConsultaDispositivoUI.INPUT_DESC_ROBO).sendKeys(Desc);
 
 
 
 
         }else {
 
-            webelementoformloss = getTargetShadow(driver, BLOQUEOONESHADOWDEVICE, BLOQUEOLOSSSHADOWDEVICE);
-            EjecutarScript.scrollSelenium(driver,getShadowExistente(webelementoformloss, INPUT_DEPTO_LOSS));
-            getShadowExistente(webelementoformloss, INPUT_DEPTO_LOSS).sendKeys(Depto);
-            getShadowExistente(webelementoformloss, INPUT_FECHA_LOSS).sendKeys(Fecha);
-            getShadowExistente(webelementoformloss, INPUT_HORA_LOSS).sendKeys(Hora);
+            webelementoformloss = getShadowRoot.getTargetShadow(driver, ConsultaDispositivoUI.BLOQUEOONESHADOWDEVICE, ConsultaDispositivoUI.BLOQUEOLOSSSHADOWDEVICE);
+            EjecutarScript.scrollSelenium(driver, getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_DEPTO_LOSS));
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_DEPTO_LOSS).sendKeys(Depto);
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_FECHA_LOSS).sendKeys(Fecha);
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_HORA_LOSS).sendKeys(Hora);
             EsperaForzada.espera(3);
-            getShadowExistente(webelementoformloss, INPUT_DIR_LOSS).sendKeys(Direcc);
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_DIR_LOSS).sendKeys(Direcc);
             EsperaForzada.espera(5);
-            getShadowExistente(webelementoformloss, INPUT_DESC_LOSS).click();
-            getShadowExistente(webelementoformloss, INPUT_DESC_LOSS).clear();
-            getShadowExistente(webelementoformloss, INPUT_DESC_LOSS).sendKeys(Desc);
-            EjecutarScript.scrollSelenium(driver,getShadowExistente(webelementoformloss, BOTON_FINALIZAR));
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_DESC_LOSS).click();
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_DESC_LOSS).clear();
+            getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.INPUT_DESC_LOSS).sendKeys(Desc);
+            EjecutarScript.scrollSelenium(driver, getShadowRoot.getShadowExistente(webelementoformloss, ConsultaDispositivoUI.BOTON_FINALIZAR));
 
 
         }

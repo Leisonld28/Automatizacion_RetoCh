@@ -9,7 +9,6 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.WebDriver;
 
-import static co.com.tigo.qa.userinterfaces.ServiciosUI.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class VerProductosHogar implements Interaction {
@@ -29,10 +28,10 @@ public class VerProductosHogar implements Interaction {
             actor.attemptsTo(
                     JavaScriptClick.on(ServiciosUI.ITEMS_PRODUCTOS.of(""+num)),
                     Espera.esperaSeg(4),
-                    Click.on(DETALLE_PRODUCTOS),
+                    Click.on(ServiciosUI.DETALLE_PRODUCTOS),
                     Espera.esperaSeg(4),
-                      Click.on(BOTON_REGRESAR),
-                    Scroll.to(ITEMS_PRODUCTOS.of(""+num)),
+                      Click.on(ServiciosUI.BOTON_REGRESAR),
+                    Scroll.to(ServiciosUI.ITEMS_PRODUCTOS.of(""+num)),
                    JavaScriptClick.on(ServiciosUI.ITEMS_PRODUCTOS.of(""+num))
 
             );

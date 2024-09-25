@@ -1,14 +1,12 @@
 package co.com.tigo.qa.tasks;
 
+import co.com.tigo.qa.userinterfaces.TiendaUI;
+import co.com.tigo.qa.utils.EjecutarScript;
+import co.com.tigo.qa.utils.getShadowRoot;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.openqa.selenium.WebDriver;
-
-import static co.com.tigo.qa.userinterfaces.TiendaUI.BOTONIR;
-import static co.com.tigo.qa.userinterfaces.TiendaUI.MAINSHADOWTIENDA;
-import static co.com.tigo.qa.utils.EjecutarScript.scrollSelenium;
-import static co.com.tigo.qa.utils.getShadowRoot.getTargetShadow;
 
 public class Tienda implements Task {
 
@@ -21,8 +19,8 @@ public class Tienda implements Task {
 
     @Override
     public <T extends Actor> void performAs(T t) {
-        scrollSelenium(driver, getTargetShadow(driver, MAINSHADOWTIENDA, BOTONIR));
-        getTargetShadow(driver, MAINSHADOWTIENDA, BOTONIR).click();
+        EjecutarScript.scrollSelenium(driver, getShadowRoot.getTargetShadow(driver, TiendaUI.MAINSHADOWTIENDA, TiendaUI.BOTONIR));
+        getShadowRoot.getTargetShadow(driver, TiendaUI.MAINSHADOWTIENDA, TiendaUI.BOTONIR).click();
 
     }
 

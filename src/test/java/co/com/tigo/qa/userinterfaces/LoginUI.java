@@ -27,6 +27,8 @@ public class LoginUI {
             .locatedBy("//input[@id='password']");
     public static final Target CAMPO_SWAGLABS= Target.the("Campo cuenta inicializada")
             .locatedBy("//div[@class='app_logo']");
+
+
     public static final Target AÑADIR_AL_CARRITO= Target.the("boton añadir al carrito")
             .locatedBy("//button[contains(@id,'add-to-cart-sauce-labs-backpack')]");
     public static final Target CARRITO_DE_COMPRAS= Target.the("carrito de compras")
@@ -52,9 +54,50 @@ public class LoginUI {
     public static final Target FINALIZAR_COMPRA= Target.the("checkout")
             .locatedBy("//button[@id='finish']");
 
+    public static final Target INICIO_SESION2= Target.the("nombreusuario")
+            .locatedBy("//input[@name='username']");
+    public static final Target CONTRASEÑA2= Target.the("contraseña")
+            .locatedBy("//input[@type='password']");
 
+    public static final Target BOTON_lOGIN= Target.the("login")
+            .locatedBy("//button[@type='submit']");
 
+    public static final Target RECRUITMENT= Target.the("login")
+            .locatedBy("//span[contains(.,'Recruitment')]");
 
+    public static final Target CANDIDATOS= Target.the("login")
+            .locatedBy("//h5[contains(.,'Candidates')]");
 
+    public static final Target  TITULO_TRABAJO= Target.the("login")
+            .locatedBy("(//i[contains(@class,'oxd-icon bi-caret-down-fill oxd-select-text--arrow')])[1]");
+
+    public static final Target  ADICION_CANDIDATO= Target.the("login")
+            .locatedBy("//button[@type='button'][contains(.,'Add')]");
+
+    public static final Target  PRIMER_NOMBRE= Target.the("candidato")
+            .locatedBy("//input[@name='firstName']");
+
+    public static final Target  SEGUNDO_NOMBRE= Target.the("candidato")
+            .locatedBy("//input[contains(@name,'middleName')]");
+    public static final Target  APELLIDO2= Target.the("candidato")
+            .locatedBy("//input[@name='lastName']");
+
+    public static final Target  VACANCY= Target.the("candidato")
+            .locatedBy("(//div[contains(.,'-- Select --')])[14]");
+
+    public static final Target  CORREO_ELECTRONICO2= Target.the("correo electronico")
+            .locatedBy("(//input[contains(@placeholder,'Type here')])[1]");
+
+    public static final Target  NUMERO_TELEFONICO= Target.the("candidato")
+            .locatedBy("(//input[contains(@placeholder,'Type here')])[2]");
+
+    public static final Target  SELECCIONAR_VACANTE= Target.the("candidato")
+            .locatedBy("//span[contains(.,'Sales Representative')]");
+
+    public static final Target  GUARDAR= Target.the("Guardar")
+            .locatedBy("//button[@type='submit'][contains(.,'Save')]");
+
+    public static final Target  REGISTROS_ALMACENADOS= Target.the("Guardar")
+            .locatedBy("//span[contains(.,'(71) Records Found')]");
 
 }

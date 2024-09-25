@@ -4,8 +4,8 @@ import static java.time.Duration.ofSeconds;
 
 import java.time.Duration;
 
-import co.com.tigo.qa.userinterfaces.*;
 import co.com.tigo.qa.userinterfaces.servicios.ServiciosPremiumHome;
+import co.com.tigo.qa.userinterfaces.*;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.questions.Visibility;

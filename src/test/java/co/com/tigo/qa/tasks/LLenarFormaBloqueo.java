@@ -1,16 +1,14 @@
 package co.com.tigo.qa.tasks;
 
+import co.com.tigo.qa.userinterfaces.ConsultaDispositivoUI;
 import co.com.tigo.qa.utils.EsperaForzada;
 import co.com.tigo.qa.utils.PropertiesLoader;
+import co.com.tigo.qa.utils.getShadowRoot;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import static co.com.tigo.qa.userinterfaces.ConsultaDispositivoUI.*;
-import static co.com.tigo.qa.utils.getShadowRoot.getShadowExistente;
-import static co.com.tigo.qa.utils.getShadowRoot.getTargetShadow;
 
 public class LLenarFormaBloqueo implements Task {
     private WebDriver driver;
@@ -36,32 +34,32 @@ public class LLenarFormaBloqueo implements Task {
         String Direcc= propertiesLoader.getProperty("DIRECCION");
         String Depto= propertiesLoader.getProperty("DEPTO");
 
-        webelementoformuno = getTargetShadow(driver, BLOQUEOONESHADOWDEVICE, BLOQUEOTWOSHADOWDEVICE);
+        webelementoformuno = getShadowRoot.getTargetShadow(driver, ConsultaDispositivoUI.BLOQUEOONESHADOWDEVICE, ConsultaDispositivoUI.BLOQUEOTWOSHADOWDEVICE);
 
         EsperaForzada.espera(2);
 
         if (tipo.equals("Robo")){
 
-           getShadowExistente(webelementoformuno, RADIOBUTTON_ROBO).click();
+           getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.RADIOBUTTON_ROBO).click();
 
 
         }else {
 
-           getShadowExistente(webelementoformuno, RADIOBUTTON_PERDIDA).click();
+           getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.RADIOBUTTON_PERDIDA).click();
 
 
         }
 
 
-        getShadowExistente(webelementoformuno, INPUT_NOMBRES_FORM_BLOQUEO).sendKeys(NOMBRE);
-        getShadowExistente(webelementoformuno, INPUT_APELLIDOS_FORM_BLOQUEO).sendKeys(APELLIDO);
-        getShadowExistente(webelementoformuno, INPUT_DOC_FORM_BLOQUEO).sendKeys(DOC);
-        getShadowExistente(webelementoformuno, INPUT_EMAIL_FORM_BLOQUEO).sendKeys(Email);
-        getShadowExistente(webelementoformuno, INPUT_PHONE_FORM_BLOQUEO).sendKeys(Phone);
-        getShadowExistente(webelementoformuno, INPUT_DEPARTAMENTO_FORM_BLOQUEO).sendKeys(Depto);
-        getShadowExistente(webelementoformuno, INPUT_ADDRESS_FORM_BLOQUEO).sendKeys(Direcc);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_NOMBRES_FORM_BLOQUEO).sendKeys(NOMBRE);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_APELLIDOS_FORM_BLOQUEO).sendKeys(APELLIDO);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_DOC_FORM_BLOQUEO).sendKeys(DOC);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_EMAIL_FORM_BLOQUEO).sendKeys(Email);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_PHONE_FORM_BLOQUEO).sendKeys(Phone);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_DEPARTAMENTO_FORM_BLOQUEO).sendKeys(Depto);
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.INPUT_ADDRESS_FORM_BLOQUEO).sendKeys(Direcc);
         EsperaForzada.espera(5);
-        getShadowExistente(webelementoformuno, CONTINUAR_FORM_BLOQUEO).click();
+        getShadowRoot.getShadowExistente(webelementoformuno, ConsultaDispositivoUI.CONTINUAR_FORM_BLOQUEO).click();
         EsperaForzada.espera(5);
 
 
